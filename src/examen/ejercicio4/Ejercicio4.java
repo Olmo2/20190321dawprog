@@ -1,6 +1,5 @@
 package examen.ejercicio4;
 
-import java.io.*;
 import java.util.*;
 import java.util.regex.*;
 
@@ -95,6 +94,7 @@ public class Ejercicio4 {
 	      String key = it.next();
 	      
 	      System.out.println("Nombre: " + key + " -> Tlf: " + agenda.get(key));
+	      teclado.close();
 	    }
 	}
 	 
