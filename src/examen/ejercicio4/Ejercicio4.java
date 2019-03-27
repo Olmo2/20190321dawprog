@@ -78,18 +78,17 @@ public class Ejercicio4 {
 					}
 					if (agenda.containsKey(nombre)) {
 						oldTlf = agenda.get(nombre);
-						agenda.replace(nombre, tlf);
-						if(tlf==agenda.get(nombre))
-							System.out.println("Eres muy tonto " + oldTlf + " y " + tlf + " Son iguales..."  );
-						else
-							System.out.println("El Número de " + nombre + " Ha sido actualizado de: " + oldTlf + " a: " + tlf);
 						
+						if(tlf.equals(oldTlf)) {
+							System.out.println("Eres muy tonto " + oldTlf + " y " + tlf + " Son iguales..."  );
+						}
+						else {
+							System.out.println("El Número de " + nombre + " Ha sido actualizado de: " + oldTlf + " a: " + tlf);
+						}
+						agenda.replace(nombre, tlf);
 						nombre = "";
 						tlf = "";
-						agenda.put(nombre, tlf);
-
-						nombre = "";
-						tlf = "";
+						
 					} else {
 						agenda.put(nombre, tlf);
 						nombre = "";
